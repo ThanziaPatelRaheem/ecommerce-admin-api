@@ -41,14 +41,15 @@ Create a `.env` file in the root with:
 ```env
 MONGO_URI=your_mongo_connection_string
 SECRET_KEY=your_jwt_secret
+```
 
 ## 📦 Tech Stack
 
-* **Backend**: Node.js, Express.js
-* **Database**: MongoDB + Mongoose
-* **Auth**: JWT, bcrypt, Passport.js (configured)
-* **Validation**: express-validator
-* **Error Handling**: Centralized with custom middleware
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB + Mongoose
+- **Auth**: JWT, bcrypt, Passport.js (configured)
+- **Validation**: express-validator
+- **Error Handling**: Centralized with custom middleware
 
 ---
 
@@ -56,21 +57,21 @@ SECRET_KEY=your_jwt_secret
 
 ### 👤 User
 
-* `POST /api/user/register` → Register a user
-* `POST /api/user/login` → Login as user
+- `POST /api/user/register` → Register a user
+- `POST /api/user/login` → Login as user
 
 ### 🛠️ Admin
 
-* `POST /api/admin/register` → Register an admin
-* `POST /api/admin/login` → Login as admin
+- `POST /api/admin/register` → Register an admin
+- `POST /api/admin/login` → Login as admin
 
 ### 📦 Product (Admin access only for write operations)
 
-* `GET /api/product/allProducts` → Get all products
-* `GET /api/product/oneProduct/:productId` → Get product by ID
-* `POST /api/product/addProduct` → Add a product
-* `PATCH /api/product/updateProduct/:productId` → Update a product
-* `DELETE /api/product/deleteProduct/:productId` → Delete a product
+- `GET /api/product/allProducts` → Get all products
+- `GET /api/product/oneProduct/:productId` → Get product by ID
+- `POST /api/product/addProduct` → Add a product
+- `PATCH /api/product/updateProduct/:productId` → Update a product
+- `DELETE /api/product/deleteProduct/:productId` → Delete a product
 
 > ⚠️ All protected routes require a valid JWT token in the `Authorization` header:
 > `Bearer <your_token_here>`
@@ -79,20 +80,20 @@ SECRET_KEY=your_jwt_secret
 
 ## 🔒 Security
 
-* Passwords are securely hashed using **bcrypt**
-* JWT-based token authentication
-* Role-based route protection (**Admin** vs. **User**)
-* MongoDB `ObjectId` validated using **express-validator**
+- Passwords are securely hashed using **bcrypt**
+- JWT-based token authentication
+- Role-based route protection (**Admin** vs. **User**)
+- MongoDB `ObjectId` validated using **express-validator**
 
 ---
 
 ## 📌 To-Do (Optional Enhancements)
 
-* ⏳ Add pagination & filtering to product list
-* 🖼️ Add product image upload (e.g., using **Multer** or **Firebase Storage**)
-* ✅ Add logout & token expiration handling
-* 🧪 Write unit & integration tests
-* 🚀 Deploy using **Render**, **Vercel**, or any hosting platform
+- ⏳ Add pagination & filtering to product list
+- 🖼️ Add product image upload (e.g., using **Multer** or **Firebase Storage**)
+- ✅ Add logout & token expiration handling
+- 🧪 Write unit & integration tests
+- 🚀 Deploy using **Render**, **Vercel**, or any hosting platform
 
 ---
 
@@ -104,4 +105,3 @@ It helped reinforce concepts like **route protection**, **JWT authentication**, 
 It served as a great hands-on practice of real-world patterns in **Node.js** development.
 
 More features like **cart handling**, **payment integration**, and **order tracking** can be added in future enhancements.
-```
